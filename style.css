@@ -1,0 +1,221 @@
+	html,body{
+	  	text-size-adjust:none;
+	  	-webkit-text-size-adjust:none;
+	  	-moz-text-size-adjust:none;
+	  	-ms-text-size-adjust:none;
+	  	background-color:#E0E0E0;
+	  	font-family: "Times New Roman", Times, serif;
+	  	font-size:15px;
+	  	font-weight:400;
+	  	line-height:1.2;
+	  	color:#000;
+	} 
+	p{
+	  	margin:0;
+	}
+	a,a:link,a:hover,a:active,a:visited{
+	  	color:#fff;
+	  	margin:0;
+	  	text-decoration:none;
+	  	outline:0;
+	}
+
+	/* info divs */
+	.info{
+	  	position:fixed;
+	  	max-width:500px;
+	  	top:0;
+	  	left:0;
+	  	padding-top:8px;
+	  	padding-left:12px;
+	  	padding-right:8px;
+	  	z-index:1500;
+	}
+	#name{
+	  	text-decoration:none;
+	  	padding-right:60px;
+	}
+	#about{
+	  	text-decoration:none;
+	}
+	#about:hover,#name:hover{
+	  	cursor:pointer;
+	}
+
+	/* caption divs */
+	.captions{
+	  	position:fixed;
+	  	width:100vw;
+	  	left:0;
+	  	bottom:10px;
+	  	padding-right:12px;
+	  	padding-left:20px;
+	  	mix-blend-mode:difference;
+	  	z-index:1500;
+	}
+	.captions:not(.slick-initialized){ 
+		display:none !important; 
+	}
+	.captions .slick-track{
+		display:flex;
+		align-items:flex-end;
+	}
+	.caption{
+		text-align:center;
+		display:flex;
+		align-items:flex-end;
+		flex-direction:inline-row;
+	}
+	.caption-desktop-left{
+	    width:100%;
+	    display:inline-block;
+	}
+	.caption-desktop-right{
+	    width:0%;
+	    display:none;
+	}
+	.collapsing {
+	  	-webkit-transition:height 0.01s;
+	  	-moz-transition:height 0.01s;
+	  	-ms-transition:height 0.01s;
+	  	-o-transition:height 0.01s;
+	  	transition:height 0.01s;
+	}
+
+	/* slideshow */
+	.container{
+	  	max-height:100vh !important;
+	  	max-height:-webkit-fill-available !important;
+	  	max-width:100% !important;
+	  	margin:0;
+	  	padding:0;
+	  	overflow:hidden;
+	  	-ms-touch-action: pan-y;
+	  	touch-action: pan-y;
+	}
+	.slick-slide{
+	  	-ms-touch-action: pan-y;
+	  	touch-action: pan-y;
+	}
+	.slick .slick-slide{
+	  	height:100vh !important;
+	}
+	.slide-left, .slide-right{
+	  	object-position:center center;
+	}
+	.spread-right{
+	  	object-position:center left;
+	}
+	.spread-left{
+	  	object-position:center right;
+	}
+	img{
+		max-height:100% !important;
+		height:100% !important;
+		height:-webkit-fill-available !important;
+		width:auto !important;
+		width:100% !important;
+		object-fit:cover;
+	}
+	img#fit{
+		object-fit:contain;
+	}
+	.slick-list{
+	    max-height:100vh;
+	    max-height:-webkit-fill-available !important;
+	    overflow:hidden
+	}
+  	.slick-track{
+	    max-height:100vh;
+	    max-height:-webkit-fill-available !important;
+	    overflow:hidden
+	}
+  	.slide{
+	    width:100%;
+	    max-height:100vh;
+	    max-height:-webkit-fill-available !important;
+	    margin:0 auto;
+	    padding-top:0 !important;
+	    padding-bottom:0 !important;
+	}
+
+	/* arrows */
+	.slick-next.slick-arrow,.slick-prev.slick-arrow{
+	    visibility:hidden;
+	    position:absolute;
+	  	top:0;
+	  	width:50%;
+	  	height:100%;
+	  	border:0;
+	  	padding:0;
+	  	opacity:0;
+	  	z-index:1000;
+	}
+
+	/* scaled down screen */
+	@media (min-width:460px) {
+		html,body{
+	  		font-size: 16px;
+	    }
+		img{
+		    object-fit:cover;
+		}
+		.info{
+		  	padding-top:12px;
+		  	padding-left:20px;
+		}
+		.captions{
+	  		bottom:17px;
+		}
+		.caption-desktop-left{
+	    	width:100%;
+		}
+		.caption-desktop-right{
+	    	width:0%;
+	    	display:none;
+		}
+		.slick-next.slick-arrow,.slick-prev.slick-arrow{
+		  	visibility:visible;
+		}
+		.slick-next.slick-arrow{
+		  	cursor:e-resize;
+		  	right:0;
+		}
+		.slick-prev.slick-arrow{
+			cursor:w-resize;
+		  	left:0;
+		}
+	}
+	/* laptop screen */
+	@media (min-width:768px){
+	    img{
+		    object-fit:contain;
+		}
+	  	.slick-next.slick-arrow,.slick-prev.slick-arrow{
+	    	visibility:visible;
+	    }
+	  	.caption-desktop-left,.caption-desktop-right{
+		    width:49%;
+		    display:inline-block;
+		}
+		.slide-left{
+	    	padding-right:10px !important;
+	    }
+	  	.slide-right{
+	    	padding-left:10px !important;
+	    }
+	}
+	/* big screen */
+	@media (min-width:1600px){
+	  	html,body{
+	    } 
+	}
+	/* phone: landscape */
+	@media screen and (orientation: landscape)
+	and (-webkit-min-device-pixel-ratio: 2){
+		html,body{
+	    }
+		img{
+		    object-fit:contain;
+		}
+	}
