@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ronja Andersen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="title" content="Ronja Andersen" />
+    <meta name="description" content="Ronja Andersen is a graphic designer based in Amsterdam." />
+    <meta property="og:title" content="Ronja Andersen" />
+    <meta property="og:description" content="Ronja Andersen is a graphic designer based in Amsterdam." />
+    <meta property="og:url" content="https://ronjaandersen.com" />
+    <meta property="og:type" content="Website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ronja Andersen" />
+    <meta name="twitter:description" content="Ronja Andersen is a graphic designer based in Amsterdam." />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+      $('.slick').slick({
+        asNavFor: '.captions',
+        autoplay:false,
+        mobileFirst:true,
+        swipe:true,
+        dots:false,
+        arrows:true,
+        speed:1000,
+        slidesToShow:1,
+        swipeToSlide:true,
+        responsive: [{
+            breakpoint:768,
+              settings: {
+                mobileFirst:true,
+                arrows:true,
+                slidesToShow:2,
+                slidesToScroll:2,
+                swipeToSlide:2
+                }
+            }]
+        });
+      $('.captions').slick({
+          autoplay:false,
+          mobileFirst:true,
+          fade:true,
+          dots:false,
+          arrows:false,
+          speed:1,
+          slidesToShow:1,
+          accessibility:false
+          });
+      });
+
+    $(window).resize(function(){
+      $('.slick')[0].slick.refresh();
+    });
+
+    $(document).ready(function(){
+    $("#name").click(function(){
+      $("#about").toggle();
+      $("#name").hide();
+      });
+      $("#about").click(function(){
+      $("#name").show();
+      $("#about").toggle();
+        });
+    });
+  </script>
+</head>
+
+<style>
+    html,body{
+      text-size-adjust:none;
+      -webkit-text-size-adjust:none;
+      -moz-text-size-adjust:none;
+      -ms-text-size-adjust:none;
+      background-color:#E0E0E0;
+      font-family: "Times New Roman", Times, serif;
+      font-size:15px;
+      font-weight:400;
+      line-height:1.2;
+      color:#000;
+  } 
+  p{
+      margin:0;
+  }
+  a,a:link,a:hover,a:active,a:visited{
+      color:#000;
+      margin:0;
+      outline:0;
+  }
+  a{
+      text-decoration: underline;
+      -webkit-text-decoration-line: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+  }
+  a:hover, .caption a{
+    text-decoration: none;
+    -webkit-text-decoration-line: none;
+  }
+  .captiona:hover,#name:hover{
+      text-decoration: underline;
+      -webkit-text-decoration-line: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+  }
+
+  .info{
+      position:fixed;
+      max-width:500px;
+      top:0;
+      left:0;
+      padding-top:8px;
+      padding-left:12px;
+      padding-right:8px;
+      z-index:1500;
+  }
+  #name{
+      text-decoration:none;
+      padding-right:60px;
+  }
+  #about{
+      text-decoration:none;
+  }
+  #about:hover,#name:hover{
+      cursor:pointer;
+  }
+  .captions{
+      position:fixed;
+      width:100vw;
+      left:0;
+      bottom:10px;
+      padding-right:12px;
+      padding-left:20px;
+      z-index:1500;
+  }
+  .captions:not(.slick-initialized){ 
+    display:none !important; 
+  }
+  .captions .slick-track{
+    display:flex;
+    align-items:flex-end;
+  }
+  .caption{
+    text-align:center;
+    display:flex;
+    align-items:flex-end;
+    flex-direction:inline-row;
+  }
+  .caption-desktop-left{
+      width:100%;
+      display:inline-block;
+  }
+  .caption-desktop-right{
+      width:0%;
+      display:none;
+  }
+  .collapsing {
+      -webkit-transition:height 0.01s;
+      -moz-transition:height 0.01s;
+      -ms-transition:height 0.01s;
+      -o-transition:height 0.01s;
+      transition:height 0.01s;
+  }
+  .container{
+      max-height:100vh !important;
+      max-height:-webkit-fill-available !important;
+      max-width:100% !important;
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      -ms-touch-action: pan-y;
+      touch-action: pan-y;
+  }
+  .slick-slide{
+      -ms-touch-action: pan-y;
+      touch-action: pan-y;
+  }
+  .slick .slick-slide{
+      height:100vh !important;
+  }
+  .slide-left, .slide-right{
+      object-position:center center;
+  }
+  .spread-right{
+      object-position:center left;
+  }
+  .spread-left{
+      object-position:center right;
+  }
+  img{
+    max-height:100% !important;
+    height:100% !important;
+    height:-webkit-fill-available !important;
+    width:auto !important;
+    width:100% !important;
+    object-fit:cover;
+  }
+  img#fit{
+    object-fit:contain;
+  }
+  .slick-list{
+    max-height:100vh;
+    max-height:-webkit-fill-available !important;
+    overflow:hidden
+  }
+  .slick-track{
+      max-height:100vh;
+      max-height:-webkit-fill-available !important;
+      overflow:hidden
+  }
+    .slide{
+      width:100%;
+      max-height:100vh;
+      max-height:-webkit-fill-available !important;
+      margin:0 auto;
+      padding-top:0 !important;
+      padding-bottom:0 !important;
+  }
+
+  /* arrows */
+  .slick-next.slick-arrow,.slick-prev.slick-arrow{
+      visibility:hidden;
+      position:absolute;
+      top:0;
+      width:50%;
+      height:100%;
+      border:0;
+      padding:0;
+      opacity:0;
+      z-index:1000;
+  }
+
+  /* scaled down screen */
+  @media (min-width:460px) {
+    html,body{
+        font-size: 16px;
+      }
+    img{
+        object-fit:cover;
+    }
+    .info{
+        padding-top:12px;
+        padding-left:20px;
+    }
+    .captions{
+        bottom:17px;
+    }
+    .caption-desktop-left{
+        width:100%;
+    }
+    .caption-desktop-right{
+        width:0%;
+        display:none;
+    }
+    .slick-next.slick-arrow,.slick-prev.slick-arrow{
+        visibility:visible;
+    }
+    .slick-next.slick-arrow{
+        cursor:e-resize;
+        right:0;
+    }
+    .slick-prev.slick-arrow{
+      cursor:w-resize;
+        left:0;
+    }
+  }
+
+  @media (min-width:768px){
+      img{
+        object-fit:contain;
+    }
+      .slick-next.slick-arrow,.slick-prev.slick-arrow{
+        visibility:visible;
+      }
+      .caption-desktop-left,.caption-desktop-right{
+        width:49%;
+        display:inline-block;
+    }
+    .slide-left{
+        padding-right:10px !important;
+      }
+      .slide-right{
+        padding-left:10px !important;
+      }
+  }
+
+  @media screen and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2){
+    img{
+        object-fit:contain;
+    }
+  }
+</style>
+
+<body>
+
+  <header class="info">
+    <a id="name">
+      Ronja Andersen
+    </a>
+    <span id="about" style="display:none;">
+      Ronja Andersen works across graphic design, artistic research, design education and web development. Based in Amsterdam.<br>
+      <br>
+      This website is an archive of graphic design work done between 2015 and 2021.<br>
+      &nbsp;<br>
+      currently:<br>
+      <a href="https://www.ap-arts.be/en/research/silence-also-sound-unseen-practices-female-film-editors" target="_blank">researcher</a> and teacher at Royal Academy of Fine Arts Antwerp<br>
+      &nbsp;<br>
+      contact:<br>
+      <a href="mailto:mail@ronjaandersen.com">mail@ronjaandersen.com</a>
+    </span>
+  </header>
+
+  <div class="container"> 
+    <div class="slick">
+
+      <div class="slide">
+        <img src="images/NightSoil_01.jpeg" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/NightSoil_02.jpeg" class="slide-right"/>
+      </div>
+
+      <div class="slide">
+        <img src="images/clara_cover.webp" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/clara01.webp" class="slide-right"/>
+      </div>
+
+      <div class="slide">
+        <img src="images/bff_01.jpg" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/bff_02.jpg" class="slide-right"/>
+      </div>
+
+      <!-- Research Fellowship project -->
+      <div class="slide">
+        <img src="images/ResearchFellowship_04L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/ResearchFellowship_04R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- East -->
+      <div class="slide">
+        <img src="images/East_01.jpg" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/East_02.jpg" class="slide-right"/>
+      </div>
+
+      <!-- East -->
+      <div class="slide">
+        <img src="images/East_03.jpg" class="slide-left" id="fit"/>
+      </div>
+      <div class="slide">
+        <img src="images/East_04.jpg" class="slide-right"/>
+      </div>
+
+      <!-- aneducation -->
+      <div class="slide">
+        <img src="images/aneducation_01.jpg" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/aneducation_03.jpg" class="slide-right"/>
+      </div>
+
+      <!-- aneducation + Speech Choke -->
+      <div class="slide">
+          <img src="images/aneducation_02.jpg" class="slide-left"/>
+        </div>
+      <div class="slide">
+        <img src="images/SpeechChoke_01.jpg" class="slide-left"/>
+      </div>
+
+      <!-- Ben Lerner -->
+      <div class="slide">
+        <img src="images/TheDarkThrewPatches_01.jpg" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/TheDarkThrewPatches_02.jpg" class="slide-right"/>
+      </div>
+
+      <!-- Ben Lerner -->
+      <div class="slide">
+        <img src="images/TheDarkThrewPatches_03.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/TheDarkThrewPatches_04.jpg" class="spread-right"/>
+      </div>
+
+      <!-- Reader -->
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_01.jpg" class="slide-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_02.jpg" class="slide-right"/>
+      </div>
+
+      <!-- Reader -->
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_03L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_03R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- Reader -->
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_04L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_04R.jpg" class="spread-right"/>
+      </div> 
+
+      <!-- Reader -->
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_05L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/ReaderAantekeningenExemplaar_05R.jpg" class="spread-right"/>
+      </div>   
+
+      <!-- New Material Award + Cocaine -->
+      <div class="slide">
+        <img src="images/NewMaterialAward_01.jpg" class="slide-left" id="fit"/>
+      </div>
+      <div class="slide">
+        <img src="images/Cocaine_01.jpg" class="slide-right"/>
+      </div>
+
+      <!-- INLAND -->
+      <div class="slide">
+        <img src="images/INLAND_01L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/INLAND_01R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- INLAND -->
+      <div class="slide">
+        <img src="images/INLAND_02L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/INLAND_02R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- INLAND -->
+      <div class="slide">
+        <img src="images/INLAND_03L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/INLAND_03R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- INLAND -->
+      <div class="slide">
+        <img src="images/INLAND_04L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/INLAND_04R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- INLAND -->
+      <div class="slide">
+        <img src="images/INLAND_05L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/INLAND_05R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- Routine Pleasures -->
+      <div class="slide">
+        <img src="images/RoutinePleasures_01L.jpg" class="spread-left" id="fit"/>
+      </div>
+      <div class="slide">
+        <img src="images/RoutinePleasures_01R.jpg" class="spread-right" id="fit"/>
+      </div>
+
+      <!-- Land of the Setting Sun -->
+      <div class="slide">
+        <img src="images/LandOfTheSettingSun_02L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/LandOfTheSettingSun_02R.jpg" class="spread-right"/>
+      </div>
+
+      <!-- Land of the Setting Sun -->
+      <div class="slide">
+        <img src="images/LandOfTheSettingSun_03L.jpg" class="spread-left"/>
+      </div>
+      <div class="slide">
+        <img src="images/LandOfTheSettingSun_03R.jpg" class="spread-right"/>
+      </div>
+
+  </div>
+
+  <div class="captions">
+
+    <!-- Night Soil -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseNightSoil">
+        Night Soil, Helena Grande
+        <span id="collapseNightSoil" class="collapse">
+          &mdash; self-published, 2020
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseNightSoil">
+        Night Soil, Helena Grande
+        <span id="collapseNightSoil" class="collapse">
+          &mdash; self-published, 2020
+        </span>
+      </a>
+    </div>
+
+    <!-- Clara -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseClara">
+        She gave it to me, I got it from her, Clara Amaral
+        <span id="collapseClara" class="collapse">
+          &mdash; with Karoline Swiezynski, Kunstverein Publishing, 2021
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseClara">
+        She gave it to me, I got it from her, Clara Amaral
+        <span id="collapseClara" class="collapse">
+          &mdash; with Karoline Swiezynski, Kunstverein Publishing, 2021
+        </span>
+      </a>
+    </div>
+
+    <!-- BFF -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseBFF">
+        Biennale für Freiburg
+        <span id="collapseBFF" class="collapse">
+          &mdash; with Marius Schwarz, 2021
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseSpeechChoke">
+        Biennale für Freiburg
+        <span id="collapseSpeechChoke" class="collapse">
+          &mdash; with Marius Schwarz, 2021
+        </span>
+      </a>
+    </div>
+
+    <!-- Research Fellowship project -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseResearch">
+        Research Fellowship project
+        <span id="collapseResearch" class="collapse">
+          <br>designed with Marius Schwarz
+          <br>published by the Gerrit Rietveld Academie, 2020
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseResearch">
+        Research Fellowship project
+        <span id="collapseResearch" class="collapse">
+          <br>designed with Marius Schwarz
+          <br>published by the Gerrit Rietveld Academie, 2020
+        </span>
+      </a>
+    </div>
+
+    <!-- East -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseEast">
+        East
+        <span id="collapseEast" class="collapse">
+          &mdash; identity for a London-based practice for architecture, landscape and urban&nbsp;design
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseEast">
+        East
+        <span id="collapseEast" class="collapse">
+          &mdash; identity for a London-based practice for architecture, landscape and urban&nbsp;design
+        </span>
+      </a>
+    </div>
+
+    <!-- East -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseEast">
+        East
+        <span id="collapseEast" class="collapse">
+          &mdash; identity for a London-based practice for architecture, landscape and urban&nbsp;design
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseEast">
+        East
+        <span id="collapseEast" class="collapse">
+          &mdash; identity for a London-based practice for architecture, landscape and urban&nbsp;design
+        </span>
+      </a>
+    </div>
+
+    <!-- aneducation -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseAneducation">
+        aneducation: documenta&nbsp;14
+        <span id="collapseAneducation" class="collapse">
+          <br>edited by Sepake Angiama, Clare Butcher, Alkisti Efthymiou, Anton Kats, Arnisa&nbsp;Zeqo
+          <br>designed with Marius Schwarz for Mevis &amp; Van&nbsp;Deursen
+           <br>published in English/Greek and German/Greek by Archive Books, 2018
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseAneducation">
+        aneducation: documenta 14
+        <span id="collapseAneducation" class="collapse">
+          <br>edited by Sepake Angiama, Clare Butcher, Alkisti Efthymiou, Anton Kats, Arnisa&nbsp;Zeqo
+          <br>designed with Marius Schwarz for Mevis &amp; Van&nbsp;Deursen
+           <br>published in English/Greek and German/Greek by Archive Books, 2018
+        </span>
+      </a>
+    </div>    
+
+    <!-- aneducation + Speech Choke --> 
+    <div class="caption">
+      <div class="caption-desktop-left">
+        <a data-toggle="collapse" href="#collapseAneducation">
+          aneducation: documenta 14
+          <span id="collapseAneducation" class="collapse">
+            <br>edited by Sepake Angiama, Clare Butcher, Alkisti Efthymiou, Anton Kats, Arnisa&nbsp;Zeqo
+            <br>designed with Marius Schwarz for Mevis &amp; Van&nbsp;Deursen
+           <br>published in English/Greek and German/Greek by Archive Books, 2018
+          </span>
+        </a>
+      </div>
+
+      <div class="caption-desktop-right">
+        <a data-toggle="collapse" href="#collapseHouse">
+          Speech Choke by Helena&nbsp;Grande
+        <span id="collapseSpeechChoke" class="collapse">
+          <br>published by HB&nbsp;Publishing, 2020
+        </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseHouse">
+        Speech Choke by Helena&nbsp;Grande
+        <span id="collapseSpeechChoke" class="collapse">
+          <br>published by HB&nbsp;Publishing, 2020
+        </span>
+      </a>
+    </div>
+
+    <!-- Ben Lerner -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseBenLerner">
+          The Dark Threw Patches Upon Me Also by&nbsp;Ben&nbsp;Lerner
+          <span id="collapseBenLerner" class="collapse">
+          &mdash; nine-panel accordion with illustrations by Rudy&nbsp;Guedj, published by De Gids, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseBenLerner">
+          The Dark Threw Patches Upon Me Also by&nbsp;Ben&nbsp;Lerner
+          <span id="collapseBenLerner" class="collapse">
+          &mdash; nine-panel accordion with illustrations by Rudy&nbsp;Guedj, published by De Gids, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- Ben Lerner -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseBenLerner">
+          The Dark Threw Patches Upon Me Also by&nbsp;Ben&nbsp;Lerner
+          <span id="collapseBenLerner" class="collapse">
+          &mdash; nine-panel accordion with illustrations by Rudy&nbsp;Guedj, published by De Gids, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseBenLerner">
+          The Dark Threw Patches Upon Me Also by&nbsp;Ben&nbsp;Lerner
+          <span id="collapseBenLerner" class="collapse">
+          &mdash; nine-panel accordion with illustrations by Rudy&nbsp;Guedj, published by De Gids, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- Reader -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- Reader -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- Reader -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- Reader -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseReader">
+          Reader, aantekeningen exemplaar
+        <span id="collapseReader" class="collapse">
+          &mdash; edited and designed with Nerijus&nbsp;Rimkus, published by Werkplaats Typografie, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- New Material Award + Cocaine --> 
+    <div class="caption">
+      <div class="caption-desktop-left">
+        <a data-toggle="collapse" href="#collapseAneducation">
+          New Material Award
+          <span id="collapseAneducation" class="collapse">
+            &mdash; catalogue for exhibition at the Dutch Design Week, 2016, and Milan Design Week, 2017
+          </span>
+        </a>
+      </div>
+
+      <div class="caption-desktop-right">
+        <a data-toggle="collapse" href="#collapse1">
+          Cocaïne by Coen&nbsp;Hissink
+          <span id="collapse1" class="collapse">
+            &mdash; stamped dust jacket set in 'Praha' by&nbsp;Steven&nbsp;Lenoir, (re)published by De Gids, 2016
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapse1">
+        Cocaïne by Coen&nbsp;Hissink
+        <span id="collapse1" class="collapse">
+          &mdash; stamped dust jacket set in 'Praha' by&nbsp;Steven&nbsp;Lenoir, (re)published by De Gids, 2016
+        </span>
+      </a>
+    </div>
+
+    <!-- INLAND -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- INLAND -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- INLAND -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- INLAND -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- INLAND -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseINLAND">
+        INLAND Volume: Publishing Class&nbsp;V</span>
+        <span id="collapseINLAND" class="collapse">
+          &mdash; edited by Sanne Oorthuizen and Fernando Garcia-Dory with Janine&nbsp;Armin, designed with Nerijus Rimkus and Josse&nbsp;Pyl, published by the Dutch Art Institute, 2017
+        </span>
+      </a>
+    </div>
+
+    <!-- Routine Pleasures -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseRoutinePleasures">
+          Routine Pleasures by Melissa&nbsp;Gordon
+          <span id="collapseRoutinePleasures" class="collapse">
+            &mdash; invitation for show at Vleeshal, 2016
+          </span>
+        </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseRoutinePleasures">
+          Routine Pleasures by Melissa&nbsp;Gordon
+          <span id="collapseRoutinePleasures" class="collapse">
+            &mdash; invitation for show at Vleeshal, 2016
+          </span>
+        </a>
+    </div>
+
+    <!-- Land of the Setting Sun -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseLand">
+        Land of the Setting Sun by Miyuki&nbsp;Okuyama
+        <span id="collapseLand" class="collapse">
+          &mdash; self-published, 2015
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseLand">
+        Land of the Setting Sun by Miyuki&nbsp;Okuyama
+        <span id="collapseLand" class="collapse">
+          &mdash; self-published, 2015
+        </span>
+      </a>
+    </div>
+
+    <!-- Land of the Setting Sun -->
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseLand">
+        Land of the Setting Sun by Miyuki&nbsp;Okuyama
+        <span id="collapseLand" class="collapse">
+          &mdash; self-published, 2015
+        </span>
+      </a>
+    </div>
+    <div class="caption">
+      <a data-toggle="collapse" href="#collapseLand">
+        Land of the Setting Sun by Miyuki&nbsp;Okuyama
+        <span id="collapseLand" class="collapse">
+          &mdash; self-published, 2015
+        </span>
+      </a>
+    </div>  
+
+  </div>
+
+</body>
+
+</html>
